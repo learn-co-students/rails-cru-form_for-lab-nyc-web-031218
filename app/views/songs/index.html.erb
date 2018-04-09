@@ -1,0 +1,3 @@
+<% @songs.each{ |song| %>
+<p>My Song:</p>  <%= link_to song.name, song_path(song) %>
+<% } %>
