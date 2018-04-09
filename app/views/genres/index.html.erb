@@ -1,0 +1,3 @@
+<% @genres.each{ |genre| %>
+<div>Name:</div> <%= link_to genre.name, genre_path(genre) %>
+<% } %>
