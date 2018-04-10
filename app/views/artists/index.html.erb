@@ -1,0 +1,10 @@
+<h1>Dope Artists:</h1>
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <h3><%= link_to artist.name, artist_path(artist.id) %></h3>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/artists/new">Create a Dope Artist</a>

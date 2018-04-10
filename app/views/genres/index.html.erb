@@ -1,0 +1,10 @@
+<h1>Dope Genres:</h1>
+<ul>
+  <% @genres.each do |genre| %>
+    <li>
+      <h3><%= link_to genre.name, genre_path(genre.id) %></h3>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/genres/new">Create a Dope Genre</a>

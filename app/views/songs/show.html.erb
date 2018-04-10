@@ -1,0 +1,9 @@
+<h1>This Song is Fire</h1>
+
+<h1>Name: <%= @song.name %></h1>
+
+<p><%= (link_to @song.artist.name, artist_path(@song.artist)) if @song.artist %></p>
+<p><%= (link_to @song.genre.name, genre_path(@song.genre)) if @song.genre %></p>
+<br>
+<p><a href="/songs/<%= @song.id %>/edit">Edit Song</a></p>
+<p><a href="/songs/">View all Songs</a></p>
