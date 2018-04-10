@@ -1,0 +1,24 @@
+<h1><%= "#{@genre.name} (#{@genre.id})" %></h1>
+
+<h3>Artists</h3>
+<ul>
+  <% @genre.artists.each do |artist|  %>
+  <li><%= link_to artist.name, artist %></li>
+  <% end %>
+</ul>
+
+<h3>Songs</h3>
+<ul>
+  <% @genre.songs.each do |song|  %>
+  <li><%= link_to song.name, song %></li>
+  <% end %>
+</ul>
+
+<hr />
+<%= link_to "Genres", genres_path %> | <%= link_to "Create Genre", new_genre_path %>
+
+<div style="position: absolute; right: 0; top:0; padding:10px;">
+<%= link_to "Edit #{@genre.name}", edit_genre_path(@genre) %>
+</div>
+
+</div>

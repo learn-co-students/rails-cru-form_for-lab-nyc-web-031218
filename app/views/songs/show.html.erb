@@ -1,0 +1,17 @@
+<h1><%= "#{@song.name} (#{@song.id})" %></h1>
+
+<h3>Artist</h3>
+<p><%= link_to @song.artist.name, @song.artist %></p>
+<p><%= @song.artist.bio %></p>
+
+<h3>Genres</h3>
+<p><%= link_to @song.genre.name, genre_path(@song.genre) %></p>
+
+<hr />
+<%= link_to "Songs", songs_path %> | <%= link_to "Create Song", new_song_path %>
+
+<div style="position: absolute; right: 0; top:0; padding:10px;">
+<%= link_to "Edit #{@song.name}", edit_song_path(@song) %>
+</div>
+
+</div>
