@@ -1,0 +1,7 @@
+<h1> List of Genres </h1>
+
+<ul>
+  <% @genres.all.each do |genre| %>
+    <li> <%= genre.name %> </li>
+  <% end %>
+</ul>
