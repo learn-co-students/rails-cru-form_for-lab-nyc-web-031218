@@ -1,0 +1,10 @@
+<h1>Dope Songs:</h1>
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <p><%= link_to song.name, song_path(song.id) %></p>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/songs/new">Create a Dope Song</a>
