@@ -1,0 +1,6 @@
+<!-- And for the song show page you need to have it display each of the song's genre and artist,
+and link to the respective genre and artist show pages. -->
+
+<h1><%= @song.name %></h1>
+<%= (link_to @song.artist.name, @song.artist ) if @song.artist %>
+<%= (link_to @song.genre.name, genre_path(@song.genre)) if @song.genre %>
